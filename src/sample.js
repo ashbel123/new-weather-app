@@ -22,48 +22,49 @@ import {
 
 const changeImg = (props1) => {
   if (props1.data) {
-    console.log(props1.data.weather[0].description);
+    const curr = props1.data.weather[0].description;
+    console.log(curr);
 
     if (
-      props1.data.weather[0].description.includes("scattered") ||
-      props1.data.weather[0].description.includes("broken ") ||
-      props1.data.weather[0].description.includes("partly")
+      curr.includes("scattered") ||
+      curr.includes("broken ") ||
+      curr.includes("partly")
     ) {
-      props1.setBgImg(broken_cloud);
-    } else if (props1.data.weather[0].description.includes("overcast")) {
-      props1.setBgImg(cloud);
-    } else if (props1.data.weather[0].description.includes("clouds")) {
       props1.setBgImg(few_clouds);
-    } else if (props1.data.weather[0].description.includes("thunderstorm")) {
+    } else if (curr.includes("overcast")) {
+      props1.setBgImg(cloud);
+    } else if (curr.includes("clouds")) {
+      props1.setBgImg(broken_cloud);
+    } else if (curr.includes("thunderstorm")) {
       props1.setBgImg(thunderstorm);
-    } else if (props1.data.weather[0].description.includes("sleet")) {
+    } else if (curr.includes("sleet")) {
       props1.setBgImg(mist_snow);
     } else if (
-      props1.data.weather[0].description.includes("rain") ||
-      props1.data.weather[0].description.includes("drizzle")
+      curr.includes("rain") ||
+      curr.includes("drizzle")
     ) {
       props1.setBgImg(low_rain);
-    } else if (props1.data.weather[0].description.includes("shower")) {
+    } else if (curr.includes("shower")) {
       props1.setBgImg(shower_snow);
-    } else if (props1.data.weather[0].description.includes("snow")) {
+    } else if (curr.includes("snow")) {
       props1.setBgImg(snow);
     } else if (
-      props1.data.weather[0].description.includes("mist") ||
-      props1.data.weather[0].description.includes("haze") ||
-      props1.data.weather[0].description.includes("fog") ||
-      props1.data.weather[0].description.includes("smoke")
+      curr.includes("mist") ||
+      curr.includes("haze") ||
+      curr.includes("fog") ||
+      curr.includes("smoke")
     ) {
       props1.setBgImg(mist);
-    } else if (props1.data.weather[0].description.includes("extreme rain")) {
+    } else if (curr.includes("extreme rain")) {
       props1.setBgImg(heavy_rain);
-    } else if (props1.data.weather[0].description.includes("clear sky")) {
+    } else if (curr.includes("clear sky")) {
       props1.setBgImg(clear_sky);
     } else if (
-      props1.data.weather[0].description.includes("dust") ||
-      props1.data.weather[0].description.includes("sand")
+      curr.includes("dust") ||
+      curr.includes("sand")
     ) {
       props1.setBgImg(dust);
-    } else if (props1.data.weather[0].description.includes("tornado")) {
+    } else if (curr.includes("tornado")) {
       props1.setBgImg(tornado);
     }
   } else {
