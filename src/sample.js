@@ -125,7 +125,7 @@ function Sample() {
     console.log("just after change");
     if (city) fetchWeather();
     console.log("after fetchWeather");
-    // setCity("");
+
     // console.log("city is set to null");
   };
 
@@ -149,7 +149,6 @@ function Sample() {
         {/*  the original card */}
         <form onSubmit={submitHandler}>
           <div className="form-group">
-            
             <input
               type="text"
               placeholder="Enter your City"
@@ -162,12 +161,12 @@ function Sample() {
             <br />
           </div>
           <button type="submit">Submit</button>
-          
 
           {data && !err ? (
             <>
               <br />
               <h2>{data.name}</h2>
+              <br />
               <table className="table">
                 <thead>
                   <tr>
@@ -213,14 +212,14 @@ function Sample() {
             </>
           ) : !err ? (
             <h3></h3>
-            ) : (
-                <>
-                  <br />
-            <h3>
-              The city you are requesting is not available in our database. Try
-              another one
-            </h3>
-                </>
+          ) : (
+            <>
+              <br />
+              <h3>
+                The city you are requesting is not available in our database.
+                Try another one
+              </h3>
+            </>
           )}
         </form>
       </div>
