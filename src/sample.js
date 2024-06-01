@@ -71,7 +71,7 @@ function Sample() {
   const [data, setData] = useState(null);
   const [err, setErr] = useState(null);
   const [bgImg, setBgImg] = useState(rainbow);
-  const [change, setChange] = useState(false);
+  // const [change, setChange] = useState(false);
   const api = process.env.REACT_APP_API_KEY;
   //   console.log(bgImg);
   //   console.log(api);
@@ -97,8 +97,8 @@ function Sample() {
   };
 
   useEffect(() => {
-    console.log("in useeffect change " + change);
-    console.log("in useEffect only");
+    // console.log("in useeffect change " + change);
+    // console.log("in useEffect only");
     // if (city) fetchWeather();
     if (data) {
       console.log(data.weather[0].description);
@@ -115,9 +115,9 @@ function Sample() {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(city);
-    setChange(!change);
-    console.log("in submit handler change " + change);
-    console.log("just after change");
+    // setChange(!change);
+    // console.log("in submit handler change " + change);
+    // console.log("just after change");
     if (city) fetchWeather();
     console.log("after fetchWeather");
 
