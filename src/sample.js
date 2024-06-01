@@ -206,7 +206,7 @@ function Sample() {
               </table>
             </>
           ) : !err ? (
-            <h3></h3>
+            <></>
           ) : (
             <>
               <br />
