@@ -206,7 +206,7 @@ function Sample() {
               </table>
             </>
           ) : !err ? (
-            <></>
+            <h3>Error in API may be you have used up the quota</h3>
           ) : (
             <>
               <br />
