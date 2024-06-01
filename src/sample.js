@@ -39,10 +39,7 @@ const changeImg = (props1) => {
       props1.setBgImg(thunderstorm);
     } else if (curr.includes("sleet")) {
       props1.setBgImg(mist_snow);
-    } else if (
-      curr.includes("rain") ||
-      curr.includes("drizzle")
-    ) {
+    } else if (curr.includes("rain") || curr.includes("drizzle")) {
       props1.setBgImg(low_rain);
     } else if (curr.includes("shower")) {
       props1.setBgImg(shower_snow);
@@ -59,10 +56,7 @@ const changeImg = (props1) => {
       props1.setBgImg(heavy_rain);
     } else if (curr.includes("clear sky")) {
       props1.setBgImg(clear_sky);
-    } else if (
-      curr.includes("dust") ||
-      curr.includes("sand")
-    ) {
+    } else if (curr.includes("dust") || curr.includes("sand")) {
       props1.setBgImg(dust);
     } else if (curr.includes("tornado")) {
       props1.setBgImg(tornado);
